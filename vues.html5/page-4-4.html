@@ -8,7 +8,7 @@ html{
 	height: 100%;
 }
 body{
-	font: 1em Verdana, Arial;
+	font: 1em Verdana, Arial, helveetica, sans-serif;
 	background: -moz-linear-gradient(top, rgb(255,255,255), rgb(210,210,210));
 	background: -webkit-gradient(linear, left top, left botom, from(rgb(255,255,255)), to(rgb(210,210,210)));	
 	background: linear-gradient(to bottom, rgb(255,255,255), rgb(210,210,210));
@@ -44,7 +44,7 @@ a.button, button{
 	color:black;
 	padding: 5px 0 5px 0;
 	text-shadow: 0 1px 0 #fff;
-	border: 1px solid regba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	
 	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
@@ -127,16 +127,38 @@ a.button, button{
 	
 	-webkit-transition: opacity 500ms ease-in;
 	-moz-transition: opacity 500ms ease-in;
+	-o-transition: opacity 500ms ease-in;
 	transition: opacity 500ms ease-in;
 	
 	opacity : 0;
 	
-	pointers-events: none;
+	pointer-events: none;
 	}
 	
 	.classe_message:target{
 	opacity: 1;
-	pointers-events: auto;
+	pointer-events: auto;
+	}
+	
+	@-webkit-keyframe animation_ouverture{
+	0%{transform: scale3d(0.1, 0.1, 1); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);}
+	55%{transform: scale3d(1.08, 1.08, 1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0);}
+	0%{transform: scale3d(0.95, 0.95, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);}
+	0%{transform: scale3d(1, 1, 1); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);}
+	}
+	
+	@-moz-keyframe animation_ouverture{
+	0%{transform: scale3d(0.1, 0.1, 1); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);}
+	55%{transform: scale3d(1.08, 1.08, 1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0);}
+	0%{transform: scale3d(0.95, 0.95, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);}
+	0%{transform: scale3d(1, 1, 1); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);}
+	}
+	
+	@-o-keyframe animation_ouverture{
+	0%{transform: scale3d(0.1, 0.1, 1); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);}
+	55%{transform: scale3d(1.08, 1.08, 1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0);}
+	0%{transform: scale3d(0.95, 0.95, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);}
+	0%{transform: scale3d(1, 1, 1); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);}
 	}
 	
 	@keyframe animation_ouverture{
@@ -153,10 +175,26 @@ a.button, button{
 	animation: animation_ouverture 1000ms linear;
 	}
 	
+	@-webkit-keyframes animation_fermeture{
+	0%{transform:scale3d(1,1,1);}
+	100%{transforme: scale3d(0.1, 0.1, 1);}
+	}
+	
+	@-moz-keyframes animation_fermeture{
+	0%{transform:scale3d(1,1,1);}
+	100%{transforme: scale3d(0.1, 0.1, 1);}
+	}
+	
+	@-o-keyframes animation_fermeture{
+	0%{transform:scale3d(1,1,1);}
+	100%{transforme: scale3d(0.1, 0.1, 1);}
+	}
+	
 	@keyframes animation_fermeture{
 	0%{transform:scale3d(1,1,1);}
 	100%{transforme: scale3d(0.1, 0.1, 1);}
 	}
+	
 	
 	.classe_message>div{
 	-webkit-animation: animation_fermeture 500ms linear;
@@ -186,7 +224,7 @@ a.button, button{
 		windows.open("affichage_message","_self");
 	}
 	
-	function afficher_information(msg){
+	function afficher_avertissement(msg){
 		document.getElementById("titre_message").innerHTML="Avertissement...";
 		document.getElementById("titre_message").className="classe_avertissement";
 		document.getElementById("texte_message").innerHTML=msg;
