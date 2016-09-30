@@ -1,0 +1,116 @@
+div#page{
+	width: 800px;
+	margin:0 auto;
+	padding:0;
+	border:#000 1px solid;
+	text-alignn: left;
+	
+	-moz-bordeer-radius: 15px;
+	-webkit-border-radius: 15px;
+	-o-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	border-radius: 15px;
+	
+	background : -moz-linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+	background : -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+	background : linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+
+}
+body{
+	font: 0.8em Verdana, Arial, Helvetica, sans-serif;
+	margin:0;
+	padding 30px 0 0 0;
+	
+	background : -moz-linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+	background : -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+	background : linear-gradient(top, rgb(255, 255, 255), rgb(210, 210, 210));
+}
+html{
+	height:100%
+}
+
+div#footer{
+	height:36px;
+	padding: 0;
+	margin : 20px 0 0 0;
+	background-color: #00A3E4;
+	
+	-moz-bordeer-radius: 0 0 15px 15px;
+	-webkit-border-radius: 0 0 15px 15px;
+	-o-border-radius: 0 0 15px 15px;
+	-ms-border-radius: 0 0 15px 15px;
+	-khtml-border-radius: 0 0 15px 15px;
+	border-radius: 0 0 15px 15px;
+}
+
+div#footer p{
+	padding: 7px 0 0 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em
+	color: #fff;
+}
+
+div#content{
+	padding: 10px 30px 0 40px;
+	margin: 0;
+}
+
+div#header{
+	padding: 0;
+	margin : 0;
+}
+
+div#header-menu{
+	height:36px;
+	padding: 0;
+	margin : 0;
+	background: #00A3E4;
+	
+	-moz-bordeer-radius: 15px 15px 0 0;
+	-webkit-border-radius: 15px 15px 0 0;
+	-o-border-radius: 15px 15px 0 0;
+	-ms-border-radius: 15px 15px 0 0;
+	-khtml-border-radius: 15px 15px 0 0;
+	border-radius: 15px 15px 0 0;
+}
+
+ul#menu-horizontal{
+	height:36px;
+	padding: 0;
+	margin : 0;
+	list-style-type: none;
+}
+
+ul#menu-horizontal li{
+	height:36px;
+	padding: 0;
+	margin : 0;
+	float: left;
+	text-align: center;
+}
+
+ul#menu-horizontal li a{
+	border-right:#fff 2px solid;
+	display: block;
+	font-weight: bold;
+	fontsize: 1.2em;
+	width: 200px;
+	color: #fff;
+	line-height: 36px;
+	text-decoration: none;
+}
+
+ul#menu-horizontal li a hover{
+	background: #0b4c8e;
+}
+
+ul#menu-horizontal li:first-child a:hover{
+	-moz-bordeer-radius: 15px 0 0 0;
+	-webkit-border-radius: 15px 0 0 0;
+	-o-border-radius: 15px 0 0 0;
+	-ms-border-radius: 15px 0 0 0;
+	-khtml-border-radius: 15px 0 0 0;
+	border-radius: 15px 0 0 0;
+}
